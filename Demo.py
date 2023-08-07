@@ -74,3 +74,9 @@ z = complex(f)
 print(z)
 
 print(random.randrange(1, 50))
+    
+    
+ab = 20
+cd = 30
+de=ab+cd
+print(de)
