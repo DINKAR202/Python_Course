@@ -1,82 +1,98 @@
-import random
+# import random
 
-a = 20
-b = 30
-c = a+b
-d = 50 + c
-print(d)
+# a = 20
+# b = 30
+# c = a+b
+# d = 50 + c
+# print(d)
 
 
-a = 4
-A = "Sally"
-print(a)
-print(A)
+# a = 4
+# A = "Sally"
+# print(a)
+# print(A)
     
-    # if else
-# if a > b:
-#     print("a is greater than b");
-# else:
-#     print("b is less than a");
+#     # if else
+# # if a > b:
+# #     print("a is greater than b");
+# # else:
+# #     print("b is less than a");
 
-# Many Values to Multiple Variables
-print("Many Values to Multiple Variables")
+# # Many Values to Multiple Variables
+# print("Many Values to Multiple Variables")
 
-x, y, z = "Aditi", "Raju", "Adi"
-print(x)
-print(y)
-print(z)
+# x, y, z = "Aditi", "Raju", "Adi"
+# print(x)
+# print(y)
+# print(z)
 
-# many variable is to one value
-print("many variable is to one value")
-x = y = z = "Adi"
-print(x)
-print(y)
-print(z)
+# # many variable is to one value
+# print("many variable is to one value")
+# x = y = z = "Adi"
+# print(x)
+# print(y)
+# print(z)
 
-# Unpack a Collection
-print("Unpack a Collection")
-fruits = ["apple", "bannana", "cherry"]
-x,y,z = fruits
-print(x)
-print(y)
-print(z)
+# # Unpack a Collection
+# print("Unpack a Collection")
+# fruits = ["apple", "bannana", "cherry"]
+# x,y,z = fruits
+# print(x)
+# print(y)
+# print(z)
 
 
-# Global Variables
-print("1. Global Variables")
+# # Global Variables
+# print("1. Global Variables")
 
-x = "awesome"
+# x = "awesome"
 
-def myfunc():
-    # x = "Dinkar"
-    print("Python is " + x)
+# def myfunc():
+#     # x = "Dinkar"
+#     print("Python is " + x)
     
-myfunc();
+# myfunc();
 
-print("Python is " + x)
-
-
-def myfunc():
-      global d
-      d = "fantastic"
-
-myfunc()
-
-print("Python is " + d)
+# print("Python is " + x)
 
 
+# def myfunc():
+#       global d
+#       d = "fantastic"
 
-f = 20
-print(f)
-g = float(f)
-print(g)
-z = complex(f)
-print(z)
+# myfunc()
 
-print(random.randrange(1, 50))
+# print("Python is " + d)
+
+
+
+# f = 20
+# print(f)
+# g = float(f)
+# print(g)
+# z = complex(f)
+# print(z)
+
+# print(random.randrange(1, 50))
     
     
-ab = 20
-cd = 30
-de=ab+cd
-print(de)
+# ab = 20
+# cd = 30
+# de=ab+cd
+# print(de)
+
+
+# Function
+
+def hithere():
+    print("Hey kaise ho bsdk")
+    
+hithere()
+
+# exception handling
+
+try:
+    a= int(input("Enter your No: "))
+    print(a + 3)
+except Exception as e:
+    print("Some error occured: ", e)
