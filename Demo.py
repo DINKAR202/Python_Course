@@ -91,8 +91,15 @@ hithere()
 
 # exception handling
 
-try:
-    a= int(input("Enter your No: "))
-    print(a + 3)
-except Exception as e:
-    print("Some error occured: ", e)
+# try:
+#     a= int(input("Enter your No: "))
+#     print(a + 3)
+# except Exception as e:
+#     print("Some error occured: ", e)
+
+# file handling
+
+f = open("dinkar.txt", "r")
+s = f.read()
+print(s)
+f.close()
