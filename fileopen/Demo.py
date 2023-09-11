@@ -99,7 +99,7 @@ hithere()
 
 # file handling
 
-f = open("dinkar.txt", "r")
+f = open("demo.txt", "r")
 s = f.read()
 print(s)
 f.close()
