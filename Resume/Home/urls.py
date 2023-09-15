@@ -1,0 +1,47 @@
+from Home import views
+from django.conf import settings
+from django.urls import include,path
+
+urlpatterns = [
+    path('index',views.index,name='index'),
+    path('aboutus',views.aboutus,name='aboutus'),
+    path('home',views.home,name='home'),
+    path('contactus',views.contactus,name='contactus'),
+    path('addquestion',views.addquestion,name='addquestion'),
+    path('adminaddinstructor',views.adminaddinstructor,name='adminaddinstructor'),
+    path('admineditinstructordetails',views.admineditinstructordetails,name='admineditinstructordetails'),
+    path('admineditstudent',views.admineditstudent,name='admineditstudent'),
+    path('adminhome',views.adminhome,name='adminhome'),
+    path('adminsettings',views.adminsettings,name='adminsettings'),
+    path('adminstudentmanage',views.adminstudentmanage,name='adminstudentmanage'),
+    path('adminviewinstructor',views.adminviewinstructor,name='adminviewinstructor'),
+    path('cvreport',views.cvreport,name='cvreport'),
+    path('displayallimage',views.displayallimage,name='displayallimage'),
+    path('displayquiz',views.displayquiz,name='displayquiz'),
+    path('editinstructorprofile',views.editinstructorprofile,name='editinstructorprofile'),
+    path('imageoptiononlyview',views.imageoptiononlyview,name='imageoptiononlyview'),
+    path('imagequestion',views.imagequestion,name='imagequestion'),
+    path('imagequestionoptionadd',views.imagequestionoptionadd,name='imagequestionoptionadd'),
+    path('insteditstudent',views.insteditstudent,name='insteditstudent'),
+    path('instmanagestudent',views.instmanagestudent,name='instmanagestudent'),
+    path('instructorhome',views.instmanagestudent,name='instructorhome'),
+    path('instructorprofileview',views.instructorprofileview,name='instructorprofileview'),
+    path('instsettings',views.instsettings,name='instsettings'),
+    path('insttextcorpus',views.insttextcorpus,name='insttextcorpus'),
+    path('login',views.login,name='login'),
+    path('onlyoptionadd',views.onlyoptionadd,name='onlyoptionadd'),
+    path('onlyoptiondisplay',views.onlyoptiondisplay,name='onlyoptiondisplay'),
+    path('optionquestionimageview',views.optionquestionimageview,name='optionquestionimageview'),
+    path('prediction',views.prediction,name='prediction'),
+    path('profile',views.profile,name='profile'),
+    path('signup',views.signup,name='signup'),
+    path('quiz',views.quiz,name='quiz'),
+    path('questionedit',views.questionedit,name='questionedit'),
+    path('questionpaper',views.questionpaper,name='questionpaper'),
+    path('questionselect',views.questionselect,name='questionselect'),
+    path('viewprofile',views.viewprofile,name='viewprofile'),
+    path('questionview',views.questionview,name='questionview'),
+    path('settings',views.settings,name='settings'),
+
+
+]
