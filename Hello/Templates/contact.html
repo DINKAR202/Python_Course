@@ -9,20 +9,27 @@
 <div class="container">
     <h3 class="text-center">Contact Us</h3>
     <form>
-        <div class="mb-3">
+        <div class="form-group">
           <label for="name" class="form-label">Name:</label>
-          <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Enter your name">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
         </div>
 
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+        <div class="form-group">
+          <label for="email" class="form-label">Email address:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="form-group">
+          <label for="desc">Tell me about what you want to contact me for....</label>
+          <textarea class="form-control" name="form-control" id="desc" rows="3"name="desc"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
       </form>
 </div>
 
