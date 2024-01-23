@@ -6,5 +6,6 @@ class Contact(models.Model):
     email = models.CharField(max_length=122)
     phone = models.CharField(max_length=12)
     desc = models.TextField()
+    date = models.DateField()
     
     
