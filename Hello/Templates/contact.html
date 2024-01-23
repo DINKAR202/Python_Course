@@ -1,36 +1,67 @@
-{% extends 'base.html' %}
-
-{% block title %}Contact{% endblock title %}
-
-{% block body %}
+{% extends 'base.html' %} {% block title %}Contact{% endblock title %} {% block
+body %}
 <div class="container-fluid p-0">
-    <img src="/static/img/2.jpg" class="d-block w-100" style="height: 75vh;" alt="...">
+  <img
+    src="/static/img/2.jpg"
+    class="d-block w-100"
+    style="height: 75vh"
+    alt="..."
+  />
 </div>
 <div class="container">
-    <h3 class="text-center">Contact Us</h3>
-    <form method="post" action="/contact">
-        <div class="form-group">
-          <label for="name" class="form-label">Name:</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-        </div>
+  <h3 class="text-center">Contact Us</h3>
+  <form method="post" action="/contact">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name" class="form-label">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+      />
+    </div>
 
-        <div class="form-group">
-          <label for="email" class="form-label">Email address:</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-        </div>
+    <div class="form-group">
+      <label for="email" class="form-label">Email address:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+      />
+    </div>
 
-        <div class="form-group">
-          <label for="phone" class="form-label">Phone Number</label>
-          <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
-        </div>
+    <div class="form-group">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input
+        type="phone"
+        class="form-control"
+        id="phone"
+        name="phone"
+        placeholder="Enter your Phone Number"
+      />
+    </div>
 
-        <div class="form-group">
-          <label for="desc">Tell me about what you want to contact me for....</label>
-          <textarea class="form-control" name="form-control" id="desc" rows="3"name="desc"></textarea>
-        </div>
+    <div class="form-group">
+      <label for="desc"
+        >Tell me about what you want to contact me for....</label
+      >
+      <textarea
+        class="form-control"
+        name="form-control"
+        id="desc"
+        rows="3"
+        name="desc"
+      ></textarea>
+    </div>
 
-        <button type="submit" class="btn btn-primary mt-3">Submit click here for storing</button>
-      </form>
+    <button type="submit" class="btn btn-primary mt-3">
+      Submit click here for storing
+    </button>
+  </form>
 </div>
 
 {% endblock body %}
