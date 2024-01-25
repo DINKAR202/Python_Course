@@ -9,3 +9,6 @@ class Contact(models.Model):
     date = models.DateField()
     
     
+    # def__str__(self):
+    #     return self.name
+    
