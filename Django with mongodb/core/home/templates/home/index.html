@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends '../base.html' %}
+{ % block start % }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is django tutorial in home page</title>
-
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
-</head>
-
-<body>
     <h2>Hey there kaise ho sbhi</h2>
     <hr>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptatibus beatae minima ullam, doloremque
@@ -54,13 +39,5 @@
         {%endif%}
     </p>
     <hr>
-    <Button onclick="handleClick()">click here</Button>
 
-    <script>
-        function handleClick() {
-            alert("Button clicked!");
-        }
-    </script>
-</body>
-
-</html>
+{ % endblock % }
