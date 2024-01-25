@@ -3,6 +3,13 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
+    peoples = [
+        {'name':'Abhishek Gupta', 'age':'26'},
+        {'name':'Ragni', 'age':'21'},
+        {'name':'Neha kamti', 'age':'27'},
+        {'name':'Dinkar Raj', 'age':'19'},
+        {'name':'Preety singh', 'age':'22'}
+    ]
     return render(request, "home/index.html")
     
 
