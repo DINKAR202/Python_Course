@@ -36,15 +36,17 @@
             <td>{{people.name}}</td>
             <td>{{people.age}}</td>
             <td>
-                {% if people.age >= 18 %}
-                👎
-                {% else %}
+                {% if people.age > 18 %}
                 👍
+                {% else %}
+                👎
                 {% endif %}
             </td>
         </tr>
         {% endfor %}
     </table>
+    <hr>
+    <p>{{text}}</p>
     <hr>
     <Button onclick="handleClick()">click here</Button>
 
