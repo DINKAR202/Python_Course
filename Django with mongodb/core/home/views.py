@@ -13,12 +13,14 @@ def home(request):
     
     vegetables = ['Pumpkin', 'Tomato', 'Potatoe']    
     
-    return render(request, "home/index.html", context={'peoples':peoples, 'vegetables':vegetables})
+    return render(request, "home/index.html", context={ 'page': 'This is Django home page' ,'peoples':peoples, 'vegetables':vegetables})
     
 
 def about(request):
-    return render(request, "home/about.html")
+    context = {'page': 'About'}
+    return render(request, "home/about.html", context)
     
 def contact(request):
-    return render(request, "home/contact.html")
+    context = {'page': 'contact'}
+    return render(request, "home/contact.html", context)
     
