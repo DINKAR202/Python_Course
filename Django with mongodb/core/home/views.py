@@ -11,8 +11,9 @@ def home(request):
         {'name':'Preety singh', 'age':'22'}
     ]
     
-    text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi vero veritatis qui beatae quidem aspernatur atque a deserunt eligendi ullam quos cumque corporis voluptatum voluptate incidunt eaque commodi, accusamus maxime ipsa voluptatem soluta natupudiandae perferendis odit. Facilis ipsum perferendis consectetur, odio repellendus veniam? Error ab labore ut optio aliquid sequi earum, doloribus accusantium dolores animi obcaecati qui id ipsum dignissimos sunt ipsam? Nisi rem cum voluptas!"
-    return render(request, "home/index.html", context={'peoples':peoples, 'text':text})
+    vegetables = ['Pumpkin', 'Tomato', 'Potatoe']    
+    
+    return render(request, "home/index.html", context={'peoples':peoples, 'vegetables':vegetables})
     
 
 def about(request):

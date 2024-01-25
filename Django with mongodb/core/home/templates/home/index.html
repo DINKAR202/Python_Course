@@ -46,7 +46,13 @@
         {% endfor %}
     </table>
     <hr>
-    <p>{{text}}</p>
+    <p>
+        {% if "cucumber" in vegetables%}
+        available
+        {%else%}
+        not available
+        {%endif%}
+    </p>
     <hr>
     <Button onclick="handleClick()">click here</Button>
 
