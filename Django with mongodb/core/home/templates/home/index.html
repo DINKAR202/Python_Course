@@ -23,20 +23,28 @@
         aspernatur qui. Magnam, iusto dolore, doloremque ad dicta iste ratione praesentium eligendi autem labore
         distinctio vero fugiat hic totam incidunt eius rem accusamus!</p>
 
-        <table>
-            <tr>
-              <th>S.No</th>
-              <th>FullName</th> 
-              <th>Age</th>
-            </tr>
-            {% for people in peoples %}
-            <tr>
-              <td>{{forloop.counter}}</td>
-              <td>{{people.name}}</td>
-              <td>{{people.age}}</td>
-            </tr>
-            {% endfor %}
-          </table>
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>FullName</th>
+            <th>Age</th>
+            <th>Can Vote</th>
+        </tr>
+        {% for people in peoples %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{people.name}}</td>
+            <td>{{people.age}}</td>
+            <td>
+                {% if people.age >= 18 %}
+                👎
+                {% else %}
+                👍
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
     <hr>
     <Button onclick="handleClick()">click here</Button>
 
