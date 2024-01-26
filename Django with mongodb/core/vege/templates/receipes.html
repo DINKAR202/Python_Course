@@ -23,13 +23,14 @@
 
       {{receipes}}
 
-      <table class="table">
+      <table class="table container">
         <thead>
           <tr>
             <th scope="col">S.NO</th>
             <th scope="col">Receipe Name</th>
             <th scope="col">Receipe Desc</th>
             <th scope="col">Image</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -39,6 +40,9 @@
             <td>{{receipe.receipe_name}}</td>
             <td>{{receipe.receipe_description}}</td>
             <td>{{receipe.receipe_image}}</td>
+            <td>
+              <button class="btn btn-danger">Delete</button>
+            </td>
           </tr>
           {% endfor %}
         </tbody>
