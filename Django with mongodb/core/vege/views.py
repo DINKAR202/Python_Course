@@ -10,11 +10,14 @@ def receipes(request):
         receipe_description = data.get('receipe_description')
         
         Receipe.objects.create(
-            receipe_image = receipe_image,
             receipe_name = receipe_name,
             receipe_description = receipe_description,
+            receipe_image = receipe_image,
         )
         
         return redirect('/receipes/')
+    
+    queryset = Receipe.objects.all()
+    context = {'receipes': queryset}
         
-    return render(request, 'receipes.html')
+    return render(request, 'receipes.html', context)

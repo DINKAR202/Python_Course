@@ -20,6 +20,29 @@
           </div>
         <button type="submit" class="btn btn-success">Add Receipe</button>
       </form>
-</div>
+
+      {{receipes}}
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S.NO</th>
+            <th scope="col">Receipe Name</th>
+            <th scope="col">Receipe Desc</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for receipe in receipes %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{receipe.receipe_name}}</td>
+            <td>{{receipe.receipe_description}}</td>
+            <td>{{receipe.receipe_image}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
 
 {% endblock %}
