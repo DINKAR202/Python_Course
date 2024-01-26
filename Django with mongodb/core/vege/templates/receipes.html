@@ -2,20 +2,20 @@
 {% block start %}
 
 <div class="containner mt-5 ">
-    <form class="col-6 mx-auto card p-3 shadow-lg" method="post">
+    <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
         <h2 class="text-center"><b><i>This is receipes website</i></b></h2>
         <hr>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Receipe name</label>
-          <input type="text" class="form-control">
+          <input name="receipe_name" type="text" class="form-control">
         </div>
         <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <textarea class="form-control" name="receipe_description" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">Receipe description</label>
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Receipe image</label>
-            <input type="file" class="form-control">
+            <input type="file" name="receipe_image" class="form-control">
           </div>
         <button type="submit" class="btn btn-success">Add Receipe</button>
       </form>
