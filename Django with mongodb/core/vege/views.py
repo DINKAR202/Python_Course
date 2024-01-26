@@ -2,14 +2,15 @@ from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
+
 # Create your views here.
 
 def receipes(request):
     if request.method == "POST":
         data = request.POST
-        receipe_image = request.FILES.get('receipe_image')
         receipe_name = data.get('receipe_name')
         receipe_description = data.get('receipe_description')
+        receipe_image = request.FILES.get('receipe_image')
         
         Receipe.objects.create(
             receipe_name = receipe_name,
@@ -33,7 +34,6 @@ def update_receipe(request, id):
 
 def delete_receipe(request, id):
     queryset = Receipe.objects.get(id = id)
-    print("ID", queryset)
     queryset.delete()
     return redirect('/receipes/')
     
