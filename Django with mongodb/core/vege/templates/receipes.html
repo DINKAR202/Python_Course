@@ -21,9 +21,7 @@
         <button type="submit" class="btn btn-success">Add Receipe</button>
       </form>
 
-      {{receipes}}
-
-      <table class="table container">
+      <table class="table container mt-5">
         <thead>
           <tr>
             <th scope="col">S.NO</th>
@@ -41,7 +39,7 @@
             <td>{{receipe.receipe_description}}</td>
             <td>{{receipe.receipe_image}}</td>
             <td>
-              <a href="/delete-receipe/{{receipe.id}}/" class="btn btn-danger">Delete</a>
+              <a href="/delete-receipe/{{ receipe.id }}/" class="btn btn-danger">Delete</a>
             </td>
           </tr>
           {% endfor %}
