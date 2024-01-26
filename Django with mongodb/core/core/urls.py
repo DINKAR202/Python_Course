@@ -1,10 +1,12 @@
 from django.contrib import admin
 from django.urls import path
-from home import views
+from home.views import *
+from vege.views import *
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
+    path('', home, name='home'),
+    path('receipes/', receipes, name='receipes'),
+    path('about/', about, name='about'),
+    path('contact/', contact, name='contact'),
     path('admin/', admin.site.urls),
 ]
