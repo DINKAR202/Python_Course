@@ -2,6 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 def receipes(request):
-    data = request.POST
-    print(data)
+    if request.method == "POST":
+        data = request.POST
+        receipe_name = data.get('receipe_name')
+        receipe_description = data.get('receipe_description')
+        print(receipe_name)
+        print(receipe_description)
     return render(request, 'receipes.html')
