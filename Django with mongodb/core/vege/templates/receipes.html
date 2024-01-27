@@ -41,8 +41,7 @@
               <img src="/media/{{receipe.receipe_image}}" alt="food img" style="height: 100px;">
             </td>
             <td>
-              <!-- <a href="/delete-receipe/{{receipe.id}}/" class="btn btn-danger">Delete</a> -->
-              <a href="{% url 'delete_receipe' id=receipe.id %}" class="btn btn-danger">Delete</a>
+              <a href="/delete-receipe/{{receipe.id}}/" class="btn btn-danger">Delete</a>
               <a href="/update-receipe/{{receipe.id}}/" class="btn btn-success">Update</a>
             </td>
           </tr>
