@@ -66,6 +66,7 @@ def update_receipe(request, id):
     return render(request, 'update_receipes.html', context)
 
 def delete_receipe(request, id):
+    id = int(id)  # Convert to integer
     receipe = get_object_or_404(Receipe, id=id)
     receipe.delete()
     return redirect('/receipes/')
