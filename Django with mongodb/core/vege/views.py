@@ -40,6 +40,7 @@
     
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Receipe
+from django.http import HttpResponseBadRequest
 
 def receipes(request):
     if request.method == "POST":
@@ -66,11 +67,12 @@ def update_receipe(request, id):
     return render(request, 'update_receipes.html', context)
 
 def delete_receipe(request, id):
-    if id is not None:
+    try:
         id = int(id)
-        receipe = get_object_or_404(Receipe, id=id)
-        receipe.delete()
-        return redirect('/receipes/')
-    else:
-        # Handle the case where 'id' is None (or redirect to an error page)
-        return HttpResponse("Invalid request")
+    except (ValueError, TypeError):
+        # Handle the case where 'id' is not a valid integer
+        return HttpResponseBadRequest("Invalid 'id' parameter")
+
+    receipe = get_object_or_404(Receipe, id=id)
+    receipe.delete()
+    return redirect('/receipes/')
