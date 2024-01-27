@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpResponse
+
+
 # Create your views here.
 
 def receipes(request):
@@ -32,7 +34,7 @@ def update_receipe(request, id):
 
 def delete_receipe(request, id):
     queryset = Receipe.objects.get(id = id)
-    print("ID", queryset)
+    # print("ID", queryset)
     queryset.delete()
     return redirect('/receipes/')
     
