@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
 # Create your views here.
 
 def receipes(request):
