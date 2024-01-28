@@ -3,7 +3,7 @@ from .models import *
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 
 
 # Create your views here.
@@ -60,6 +60,11 @@ def login_page(request):
         if user is None:
             messages.error(request, 'Invalid Passowrd')
             return redirect('/login/')
+        
+        else:
+            login(user)
+            return redirect('/receipe/')
+            
         
     return render(request, 'login.html')
 
