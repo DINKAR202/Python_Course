@@ -55,6 +55,8 @@ def login_page(request):
             messages.error(request, 'Invalid Username')
             return redirect('/login/')
         
+        user = authenticate(username = username, password = password)
+        
     return render(request, 'login.html')
 
 def register(request):
