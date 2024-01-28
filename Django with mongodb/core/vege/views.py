@@ -43,5 +43,5 @@ def delete_receipe(request, id):
     return redirect('/receipes/')
     
     
-def login(request):
+def login_page(request):
     return render(request, 'login.html')

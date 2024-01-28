@@ -16,6 +16,7 @@ urlpatterns = [
     
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
+    path('login/', login_page, name='login_page'),
     
     path('admin/', admin.site.urls),
 ]
