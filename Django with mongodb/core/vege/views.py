@@ -58,7 +58,7 @@ def login_page(request):
         user = authenticate(username = username, password = password)
         
         if user is None:
-            messages.error(request, 'Invalid Passowrd')
+            messages.error(request, 'Invalid Password')
             return redirect('/login/')
         
         else:
