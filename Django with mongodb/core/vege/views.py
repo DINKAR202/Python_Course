@@ -51,7 +51,7 @@ def login_page(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         
-        if User.objects.filter(username = username).exists():
+        if not User.objects.filter(username = username).exists():
             messages.error(request, 'Invalid Username')
             return redirect('/login/')
         
@@ -62,7 +62,7 @@ def login_page(request):
             return redirect('/login/')
         
         else:
-            login(user)
+            login(request, user)
             return redirect('/receipe/')
             
         
