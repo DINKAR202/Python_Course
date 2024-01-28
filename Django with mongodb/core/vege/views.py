@@ -42,3 +42,6 @@ def delete_receipe(request, id):
     queryset.delete()
     return redirect('/receipes/')
     
+    
+def login(request):
+    return render(request, 'login.html')
