@@ -62,5 +62,7 @@ def register(request):
         )
         user.set_password(password)
         user.save()
+        
+        return redirect('/register/')
     
     return render(request, 'register.html')
