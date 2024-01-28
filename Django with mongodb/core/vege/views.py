@@ -57,6 +57,10 @@ def login_page(request):
         
         user = authenticate(username = username, password = password)
         
+        if user is None:
+            messages.error(request, 'Invalid Passowrd')
+            return redirect('/login/')
+        
     return render(request, 'login.html')
 
 def register(request):
