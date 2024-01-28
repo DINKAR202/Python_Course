@@ -25,9 +25,9 @@
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 {% if request.user.is_authenticated %}
-                <a href="/logout/" class="btn btn-success" type="submit">Logout</a>
+                    <a href="/logout/" class="btn btn-success" type="submit">Logout</a>
                 {% else %}
-                <a href="/logout/" class="btn btn-success" type="submit">Logout</a>
+                    <a href="/logout/" class="btn btn-success" type="submit">Login</a>
                 {% endif %}
             </form>
         </div>
