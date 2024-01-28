@@ -69,6 +69,7 @@ def login_page(request):
     return render(request, 'login.html')
 
 def logout_page(request):
+    logout(request)
     return redirect('/login/')
 
 
