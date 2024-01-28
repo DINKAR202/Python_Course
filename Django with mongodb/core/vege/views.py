@@ -3,7 +3,7 @@ from .models import *
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 # Create your views here.
@@ -51,7 +51,7 @@ def login_page(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         
-        if not User.objects.filter(username = username).exists():
+        if User.objects.filter(username = username).exists():
             messages.error(request, 'Invalid Username')
             return redirect('/login/')
         
@@ -67,6 +67,10 @@ def login_page(request):
             
         
     return render(request, 'login.html')
+
+def logout_page(request):
+    return redirect('/login/')
+
 
 def register(request):
     
