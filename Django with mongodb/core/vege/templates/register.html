@@ -8,7 +8,7 @@
         </h2>
         <hr />
         {% if messages %}
-
+        {{ message.tags }}
         <div class="alert alert-primary" role="alert">
             {% for message in messages %}
             {{ message }}
@@ -33,6 +33,13 @@
             <input name="username" type="text" class="form-control" id="exampleInputEmail1"
                 aria-describedby="emailHelp" />
         </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" required />
+        </div>
+
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" name="passowrd" class="form-control" id="exampleInputPassword1" />

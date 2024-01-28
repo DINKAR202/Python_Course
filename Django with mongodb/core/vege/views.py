@@ -46,6 +46,14 @@ def delete_receipe(request, id):
     
     
 def login_page(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        if User.objects.filter(username = username).exists():
+            messages.error(request, 'Invalid Username')
+            return redirect('/login/')
+        
     return render(request, 'login.html')
 
 def register(request):
@@ -54,19 +62,21 @@ def register(request):
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         username = request.POST.get('username')
+        email = request.POST.get('email')
         password = request.POST.get('password')
         
         
         user = User.objects.filter(username = username)
         
         if user.exists():
-            messages.info(request, "Username already taken.")
+            messages.error(request, "Username already taken.")
             return redirect('/register/')
     
         user = User.objects.create(
             first_name = first_name,
             last_name = last_name,
             username = username,
+            email = email,
         )
         user.set_password(password)
         user.save()
