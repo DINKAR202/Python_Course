@@ -59,7 +59,8 @@ def register(request):
             first_name = first_name,
             last_name = last_name,
             username = username,
-            password = password,
         )
+        user.set_password(password)
+        user.save()
     
     return render(request, 'register.html')
