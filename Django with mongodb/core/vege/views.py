@@ -33,6 +33,7 @@ def receipes(request):
     context = {'receipes': queryset}   
     return render(request, 'receipes.html', context)
 
+@login_required(login_url="/login/")
 def update_receipe(request, id):
     queryset = Receipe.objects.get(id = id)
     context = {'receipe': queryset}   
