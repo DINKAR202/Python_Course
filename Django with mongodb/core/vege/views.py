@@ -94,8 +94,9 @@ def register(request):
             last_name = last_name,
             username = username,
             email = email,
+            password = password
         )
-        user.set_password(password)
+        # user.set_password(password)
         user.save()
         
         messages.info(request, "Account created Successfully")
