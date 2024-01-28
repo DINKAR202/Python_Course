@@ -54,6 +54,12 @@ def register(request):
         last_name = request.POST.get('last_name')
         username = request.POST.get('username')
         password = request.POST.get('password')
+        
+        
+        user = User.objects.filter(username = username)
+        
+        if user.exists():
+            return redirect('/register/')
     
         user = User.objects.create(
             first_name = first_name,
