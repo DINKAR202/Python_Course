@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 
 # Create your views here.
@@ -59,6 +60,7 @@ def register(request):
         user = User.objects.filter(username = username)
         
         if user.exists():
+            messages.info(request, "Username already taken.")
             return redirect('/register/')
     
         user = User.objects.create(
@@ -69,6 +71,7 @@ def register(request):
         user.set_password(password)
         user.save()
         
+        messages.info(request, "Account created Successfully")
         return redirect('/register/')
     
     return render(request, 'register.html')
