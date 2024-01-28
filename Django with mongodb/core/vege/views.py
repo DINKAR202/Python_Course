@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -99,6 +100,6 @@ def register(request):
         user.save()
         
         messages.info(request, "Account created Successfully")
-        return redirect('/register/')
+        return redirect('/login/')
     
     return render(request, 'register.html')
