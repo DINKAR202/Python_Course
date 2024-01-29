@@ -14,7 +14,7 @@ This project is a simple web application built using Django for user registratio
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/django-registration-form.git
+   git clone https://github.com/DINKAR202/Dreamproject2.git
    cd django-registration-form
 
 
