@@ -1,5 +1,4 @@
-<h1>Project Name</h1>
-<h6><b>Registration form using Django</b></h6>
+<h1><b>Registration form using Django</b></h1>
 
 <hr>
 <h5><b>Table of Contents</b></h5>
@@ -14,10 +13,10 @@
 <h2><b>Installation</b></h2>
 <ul>
     <li>
-        git clone https://github.com/your-username/your-repo.git
+        git clone https://github.com/DINKAR202/Dreamproject2.git
     </li>
-    <li># Change into the project directory</li>
+    <li>Change into the project directory</li>
     <li>cd your-repo</li>
-    <li># Install dependencies</li>
+    <li>Install dependencies</li>
 
 </ul>
