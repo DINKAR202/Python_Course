@@ -57,4 +57,3 @@ This project is a simple web application built using Django for user registratio
 ![Screenshot 2024-01-29 181349](https://github.com/DINKAR202/Python_Course/assets/109248473/baf81158-debe-4c4d-accf-47a73e2cf3db)
 ![Screenshot 2024-01-29 181835](https://github.com/DINKAR202/Python_Course/assets/109248473/a3b4d64c-34ca-4649-9a57-d665374a2168)
 ![Screenshot 2024-01-29 183355](https://github.com/DINKAR202/Python_Course/assets/109248473/36eaf023-9731-46eb-aa70-841c53dcabfa)
-![Screenshot 2024-01-29 184144](https://github.com/DINKAR202/Python_Course/assets/109248473/c426eceb-427f-4aaf-b3c4-2ff2fb3f94f2)
