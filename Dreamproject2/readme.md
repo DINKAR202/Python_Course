@@ -15,7 +15,6 @@
 <ul>
     <li>
         git clone https://github.com/your-username/your-repo.git
-
     </li>
     <li># Change into the project directory</li>
     <li>cd your-repo</li>
