@@ -18,7 +18,7 @@ This project is a simple web application built using Django for user registratio
    cd django-registration-form
 
 
-2. Activate the virtual environment:
+2. Activate the virtual environment:  ```bash
     On Windows:
     .\venv\Scripts\activate
 
