@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from Django_Registration import settings
+from Dreamprojectt import settings
 from .forms import RegisterForm
 from django.contrib import messages
 from django.contrib.auth import login
