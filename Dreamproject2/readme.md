@@ -52,3 +52,5 @@ This project is a simple web application built using Django for user registratio
 1. For any inquiries, please contact:
 
     Email: dinkar202@outlook.com
+
+## Some SS
