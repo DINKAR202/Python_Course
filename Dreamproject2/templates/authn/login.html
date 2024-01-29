@@ -11,7 +11,7 @@
     </ol>
 </nav> {% endcomment %}
 
-<div id="content-main">
+<div id="content-main" class="mt-5">
     {% if form.errors and not form.non_field_errors %}
     <p class="errornote">
         {% if form.errors.items|length == 1 %}
@@ -102,12 +102,12 @@
             <a href="{{ password_reset_url }}">Forgotten your password or username?</a>
         </div>
         {% endif %}
-        <div class="submit-row">
+        <!-- <div class="submit-row">
             <input class="btn btn-primary" type="submit" value="Log in">
-        </div>
+        </div> -->
         <br />
         <!-- <a class="btn btn-primary" href="{% url 'password_reset' %}">Forgot password?</a>-->
-        <a class="btn btn-primary" href="{% url 'register' %}">Register</a>
+        <!-- <a class="btn btn-primary" href="{% url 'register' %}">Register</a> -->
     </form>
 
 
