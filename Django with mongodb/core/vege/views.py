@@ -51,14 +51,14 @@ def delete_receipe(request, id):
     
 def login_page(request):
     if request.method == "POST":
-        email = request.POST.get('email')
+        username = request.POST.get('username')
         password = request.POST.get('password')
         
-        if not User.objects.filter(email = email).exists():
-            messages.error(request, 'Invalid email')
+        if not User.objects.filter(username = username).exists():
+            messages.error(request, 'Invalid Username')
             return redirect('/login/')
         
-        user = authenticate(email = email, password = password)
+        user = authenticate(username = username, password = password)
         
         if user is None:
             messages.error(request, 'Invalid Password')
