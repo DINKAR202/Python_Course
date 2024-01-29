@@ -21,10 +21,9 @@ This project is a simple web application built using Django for user registratio
 2. Activate the virtual environment:
 
     On Windows:
-    
     .\venv\Scripts\activate
 
-    On macOS/Linux:
+    On macOS/Linux: 
     source venv/bin/activate
 
 3. Install dependencies:
@@ -40,3 +39,16 @@ This project is a simple web application built using Django for user registratio
 6. Run the development server:
     python manage.py runserver
     Visit http://127.0.0.1:8000/ to view the application.
+
+## Usage
+
+1. Register a new user account.
+2. Log in with the registered account.
+3. Access the forget password functionality if needed.
+4. Update and manage the user profile.
+
+## Contact
+    
+1. For any inquiries, please contact:
+
+    Email: dinkar202@outlook.com
