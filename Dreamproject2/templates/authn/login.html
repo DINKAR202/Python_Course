@@ -49,13 +49,20 @@
                         <h2 class="form-title">Sign up</h2>
                             
                             <div class="form-group">
-                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
+                                <!-- <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label> -->
+                                <!-- <input type="text" name="your_name" id="your_name" placeholder="Your Name" /> -->
+                                {{ form.username.errors }}
+                                {{ form.username.label_tag }}
+                                {{ form.username }}
                             </div>
 
                             <div class="form-group">
-                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
+                                <!-- <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Password" /> -->
+                                {{ form.password.errors }}
+                                {{ form.password.label_tag }}
+                                {{ form.password }}
+                                <input type="hidden" name="next" value="{{ next }}">
                             </div>
 
                             <div class="form-group form-button">
@@ -76,7 +83,7 @@
         </section>
 
 
-        {% comment %} <div class="form-group">
+        <!-- {% comment %} <div class="form-group">
             {{ form.username.errors }}
             {{ form.username.label_tag }}
             {{ form.username }}
@@ -87,7 +94,7 @@
             {{ form.password.label_tag }}
             {{ form.password }}
             <input type="hidden" name="next" value="{{ next }}">
-        </div> {% endcomment %}
+        </div> {% endcomment %} -->
 
         {% url 'admin_password_reset' as password_reset_url %}
         {% if password_reset_url %}
