@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'Django_Registration.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'Registration',
+        'NAME': 'dbregistration',
     }
 }
 
