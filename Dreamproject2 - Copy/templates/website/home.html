@@ -1,0 +1,17 @@
+{% extends "website/base.html" %}
+
+{% block body %}
+    <title>Home</title>
+    <div class="jumbotron">
+        <h1 class="display-4">Hello!</h1>
+        <p class="lead">Django-registration form</p>
+        <hr class="my-2">
+        {% comment %} <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">Create Account</a>
+            <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Login</a>
+            <a class="btn btn-primary btn-lg" href="{% url 'logout' %}">Logout</a>
+        </p> {% endcomment %}
+    </div>
+    <!-- Example row of columns -->
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'website/base.html' %} {% block body %}
+<title>Create Account</title>
+{% csrf_token %}
+<form method="post">
+  <div class="form-group">
+    {% csrf_token %}
+    {% load static %}
+    
+    <section class="signup mt-3">
+      <div class="container">
+          <div class="signup-content">
+              <div class="signup-form">
+                  <h2 class="form-title">Sign up</h2>
+                    
+                      <div class="form-group">
+                          <label for="first_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                          <!-- <input type="text" name="first_name" id="name" placeholder="First Name" value="{{first_name}}"/> -->
+                          {{ form.first_name }}
+                      </div>
+
+                      <div class="form-group">
+                          <label for="first_last"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                          <!-- <input type="text" value="{{last_name}}" name="name" id="name" placeholder="Last Name"/> -->
+                          {{ form.last_name }}
+                      </div>
+
+                      <div class="form-group">
+                          <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                          <!-- <input type="text" value="{{username}}" name="name" id="name" placeholder="username"/> -->
+                          {{ form.username }}
+                      </div>
+
+                      <div class="form-group">
+                          <label for="email"><i class="zmdi zmdi-email"></i></label>
+                          <!-- <input type="email" value="{{email}}" name="email" id="email" placeholder="Your Email"/> -->
+                          {{ form.email }}
+                        </div>
+
+                      <div class="form-group">
+                          <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                          <!-- <input type="password" value="{{password}}" name="pass" id="pass" placeholder="Password"/> -->
+                          {{ form.password }}
+                      </div>
+
+                      <div class="form-group">
+                          <label for="password_confirm"><i class="zmdi zmdi-lock-outline"></i></label>
+                          <!-- <input type="password" value="{{password_confirm}}" name="re_pass" id="re_pass" placeholder="Repeat your password"/> -->
+                          {{ form.password_confirm }}
+                      </div>
+
+                      <div class="form-group form-button">
+                          <input type="submit" class="form-submit" value="Register"/>
+                      </div>
+
+              </div>
+              <div class="signup-image">
+                  <figure><img src="{% static 'images/signup-image.jpg' %}" alt="sing up image"></figure>
+                  <a href="/login" class="signup-image-link">I have already account</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+    <!-- <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-body">
+
+          <div class="form-group clearfix">
+            <label for="first_name" class="col-md-2 control-label text-right">First Name:</label>
+            {{ form.first_name }}
+          </div>
+
+          <div class="form-group clearfix">
+            <label for="last_name" class="col-md-2 control-label text-right">Last Name:</label>
+            {{ form.last_name }}
+          </div>
+
+          <div class="form-group clearfix">
+            <label for="username" class="col-md-2 control-label text-right">username:</label>
+            {{ form.username }}
+          </div>
+
+          <div class="form-group clearfix">
+            <label for="email" class="col-md-2 control-label text-right">Email:</label>
+            {{ form.email }}
+          </div>
+
+          <div class="form-group clearfix">
+            <label for="password" class="col-md-2 control-label text-right">Password:</label>
+            {{ form.password }}
+          </div>
+
+          <div class="form-group clearfix">
+            <label for="password_confirm" class="col-md-2 control-label text-right">Confirm Password:</label>
+            {{ form.password_confirm }}
+          </div>
+          
+        </div>
+        <input class="btn btn-primary" type="submit" value="Register" />
+      </div>
+    </div> -->
+  </div>
+</form>
+
+{% endblock %}
