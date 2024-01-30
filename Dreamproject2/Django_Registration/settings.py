@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'account'
+    'account',
+    'customadmin'
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,7 @@ SITE_NAME = 'Django - Registration'
 
 LOGIN_URL = '/login'  # Where you get sent when login is required
 LOGIN_REDIRECT_URL = '/account'  # Where you get forwarded after logging in
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
