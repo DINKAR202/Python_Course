@@ -47,7 +47,7 @@ class RegisterView(FormView):
     def form_valid(self, form):
         try:
             register_new_user(form, self.request)
-            messages.success(self.request, 'Thank you for registering. You have been automatically logged in.')
+            messages.success(self.request, 'Thank you for registering.')
             #return HttpResponseRedirect(settings.LOGIN_REDIRECT_URL)
             return HttpResponse(get_template('registration/registration_complete.html').render())
         except IntegrityError as e:
