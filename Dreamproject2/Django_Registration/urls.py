@@ -19,9 +19,10 @@ from django.urls import path
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView, \
     PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 from account.views import RegisterView
-admin.site.site_header = "Mini Blog Header"
-admin.site.site_title = "Mini Blog Title"
-admin.site.index_title = "Dashboard"
+
+# admin.site.site_header = "Mini Blog Header"
+# admin.site.site_title = "Mini Blog Title"
+# admin.site.index_title = "Dashboard"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
