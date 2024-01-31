@@ -1,3 +1,12 @@
 from django.contrib import admin
 from .models import Post, Postcategory
 # Register your models here.
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title', 'content', 'created_on']
+    
+@admin.register(Postcategory)
+class Postcategory(admin.ModelAdmin):
+    list_display = ['id', 'title', 'content', 'created_on']
+    
+
