@@ -16,10 +16,11 @@ urlpatterns = [
     
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
+    
     path('login/', login_page, name='login_page'),
     path('register/', register, name='register'),
+    path('logout/', logout_page, name='logout_page'),
     
-    path('login/', logout_page, name='logout_page'),
     
     path('admin/', admin.site.urls),
 ]
