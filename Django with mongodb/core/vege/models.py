@@ -9,9 +9,3 @@ class Receipe(models.Model):
     receipe_description = models.TextField()
     receipe_image = models.ImageField(upload_to="receipe")
     
-# class User(models.Model):
-#     first_name = models.CharField(max_length=150)
-#     last_name = models.CharField(max_length=150)
-#     username = models.CharField(max_length=50)
-#     email = models.CharField(max_length=50)
-#     password = models.CharField(max_length=60)
