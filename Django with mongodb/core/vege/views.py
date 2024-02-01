@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-@login_required(login_url="/login/")
+# @login_required(login_url="/login/")
 def receipes(request):
     if request.method == "POST":
         data = request.POST
@@ -67,7 +67,8 @@ def login_page(request):
         
         else:
             login(request, user)
-            return redirect('/receipe/')
+            # return redirect('/receipes/')
+            return redirect('/')
             
         
     return render(request, 'login.html')
