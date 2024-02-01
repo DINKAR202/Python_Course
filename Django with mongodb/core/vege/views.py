@@ -53,14 +53,13 @@ def login_page(request):
     
     if request.method == "POST":
         username = request.POST.get('username')
-        # password = request.POST.get('password')
+        password = request.POST.get('password')
         
         if not User.objects.filter(username = username).exists():
             messages.error(request, 'Invalid Username')
             return redirect('/login/')
         
-        user = authenticate(request, username = username)
-        # user = authenticate(request, username = username, password = password)
+        user = authenticate(request, username = username, password = password)
         
         if user is None:
             messages.error(request, 'Invalid Password')
