@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Receipe(models.Model):
-    User = models.ForeignKey(User, on_delete=models.SET_NULL, null = True , blank = True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null = True , blank = True)
     receipe_name = models.CharField(max_length=150)
     receipe_description = models.TextField()
     receipe_image = models.ImageField(upload_to="receipe")

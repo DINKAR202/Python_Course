@@ -1,11 +1,7 @@
 {% extends 'base.html' %} {% block start %}
 
 <div class="containner mt-5">
-  <form
-    class="col-6 mx-auto card p-3 shadow-lg"
-    method="post"
-    enctype="multipart/form-data"
-  >
+  <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <h2 class="text-center">
       <b><i>Login</i></b>
@@ -15,21 +11,15 @@
     {% if messages %}
     {{ message.tags }}
     <div class="alert alert-primary" role="alert">
-        {% for message in messages %}
-        {{ message }}
-        {% endfor %}
+      {% for message in messages %}
+      {{ message }}
+      {% endfor %}
     </div>
     {% endif %}
 
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Username</label>
-      <input
-        type="text"
-        name="username"
-        class="form-control"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-      />
+      <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
       <div id="emailHelp" class="form-text">
         We'll never share your email with anyone else.
       </div>
