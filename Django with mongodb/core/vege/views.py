@@ -97,13 +97,12 @@ def register(request):
         user = User.objects.create(
             first_name = first_name,
             last_name = last_name,
-            username = username,
             email = email,
         )
         user.set_password(password)
         user.save()
         
-        messages.info(request, "Account created Successfully")
+        messages.info(request, "Account created successfully and success")
         return redirect('/login/')
     
     return render(request, 'register.html')
