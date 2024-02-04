@@ -79,8 +79,10 @@ def sign_up(request):
             # username = username,
             email = email,
         )
-        user.set_password(password)
-        user.save()
+        # user.set_password(password)
+        # user.save()
+        student_instance.user.set_password('password')
+        student_instance.user.save()
         
         messages.info(request, "Account created Successfully")
         return redirect('/login/')
