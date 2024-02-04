@@ -21,7 +21,12 @@ templates
 media/
 
 # Static files
-static
+staticfiles/assets
+staticfiles/docs
+static/assets
+static/docs
+
+.view
 
 # Log files
 *.log
