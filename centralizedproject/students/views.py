@@ -22,7 +22,7 @@ def login_page(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         
-        if not User.objects.filter(username = username).exists():
+        if not Students.objects.filter(username = username).exists():
             messages.error(request, 'Invalid username')
             return redirect('/login/')
         
@@ -58,8 +58,8 @@ def sign_up(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         
-        user = User.objects.filter(email = email)
-        user_username = User.objects.filter(username=username)
+        user = Students.objects.filter(email = email)
+        user_username = Students.objects.filter(username=username)
         
         if user.exists():
             messages.error(request, "Email already taken.")
@@ -69,7 +69,7 @@ def sign_up(request):
             messages.error(request, "Username already taken.")
             return redirect('/register/')
         
-        user = User.objects.create(
+        user = Students.objects.create(
             first_name = first_name,
             last_name = last_name,
             date_of_birth = date_of_birth,
