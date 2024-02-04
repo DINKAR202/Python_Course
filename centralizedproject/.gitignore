@@ -26,7 +26,7 @@ staticfiles/docs
 static/assets
 static/docs
 
-.view
+.views
 
 # Log files
 *.log
