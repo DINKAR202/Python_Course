@@ -1,8 +1,24 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
+from django.contrib.auth.models import AbstractUser, AbstractBaseUser
+from .managers import CustomManager
 
 # Create your models here.
+
+class CustomUser(AbstractUser):
+        
+        username = None
+        email = models.EmailField("email_address", unique=True)
+        phone = models.CharField(max_length=15)
+        
+        USERNAME_FIELD = "email"
+        REQUIRED_FIELDS = []
+        objects = CustomManager()
+        
+        def __str__(self):
+            return self.email
+
 
 
 class Student(models.Model):

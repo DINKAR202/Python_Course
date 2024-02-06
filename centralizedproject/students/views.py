@@ -22,7 +22,7 @@ def login_page(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         
-        if not User.objects.filter(email = email).exists():
+        if not CustomUser.objects.filter(email = email).exists():
             messages.error(request, 'Invalid email')
             return redirect('/login/')
         
@@ -56,18 +56,18 @@ def sign_up(request):
         phone = request.POST.get('phone')
         password = request.POST.get('password')
         
-        user_email = User.objects.filter(email=email)
-        user = User.objects.filter(phone = phone)
+        user_email = CustomUser.objects.filter(email=email)
+        # user = CustomUser.objects.filter(phone = phone)
         
-        if user.exists():
-            messages.error(request, "phone already taken.")
-            return redirect('/register/')
+        # if user.exists():
+        #     messages.error(request, "phone already taken.")
+        #     return redirect('/register/')
         
-        elif user_email.exists():
+        if user_email.exists():
             messages.error(request, "email already taken.")
             return redirect('/register/')
         
-        user = User.objects.create(
+        user = CustomUser.objects.create(
             first_name = first_name,
             last_name = last_name,
             email = email,
