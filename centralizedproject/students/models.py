@@ -11,4 +11,7 @@ class Student(models.Model):
 class CustomUser(AbstractUser):
     
     username = none
+    student_phone = models.CharField(max_length=100, unique=True)
     
+    USERNAME_FIELD = ['student_phone']
+    REQUIRED_FIELDS = []
