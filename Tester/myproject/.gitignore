@@ -11,7 +11,7 @@ __pycache__/
 .static
 
 # templates
-# templates
+templates
 
 # Local development settings
 *.sqlite3
