@@ -16,15 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from myapp.views import *
+from college.views import *
 # from instructor.views import *
 
 urlpatterns = [
     path('', index, name='index'),
-    # path('instructor-dashboard/', instructor_dashboard, name='instructor_dashboard'),
     path('student-login/', login_page, name='login_page'),
     path('student-register/', sign_up, name='sign_up'),
     path('logout/', logout_page, name='logout_page'),
     path('forgot-password/', forgot_password, name='forgot_password'),
     path('student-dashboard/', student_dashboard, name='student_dashboard'),
+
+    # college pages
+    path('college-register', college_register, name='college_register'),
+    path('college-login', college_login, name='college_login'),
     path('admin/', admin.site.urls),
 ]
