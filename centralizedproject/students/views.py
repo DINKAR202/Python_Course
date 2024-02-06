@@ -37,7 +37,7 @@ def login_page(request):
             return redirect('/student-dashboard/')
     
     context = {
-        'title': 'Login here',
+        'title': 'Login Here',
     }
     return  render(request, 'sign-in.html', context)
 
@@ -51,25 +51,25 @@ def sign_up(request):
     if request.method == "POST":
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
-        username = request.POST.get('username')
+        phone = request.POST.get('phone')
         email = request.POST.get('email')
         password = request.POST.get('password')
         
         user = User.objects.filter(email = email)
-        user_username = User.objects.filter(username=username)
+        user_phone = User.objects.filter(phone=phone)
         
         if user.exists():
             messages.error(request, "Email already taken.")
             return redirect('/register/')
         
-        elif user_username.exists():
-            messages.error(request, "Username already taken.")
+        elif user_phone.exists():
+            messages.error(request, "Phone already taken.")
             return redirect('/register/')
         
         user = User.objects.create(
             first_name = first_name,
             last_name = last_name,
-            username = username,
+            user_phone = user_phone,
             email = email,
         )
         user.set_password(password)
@@ -79,14 +79,14 @@ def sign_up(request):
         return redirect('/login/')
     
     context = {
-        'title': 'Register here',
+        'title': 'Register Here',
     }
     return  render(request, 'sign-up.html', context)
 
 @login_required(login_url="/login/")
 def student_dashboard(request):
     context = {
-        'title': 'Student dashboard',
+        'title': 'Student Dashboard',
     }
     return  render(request, 'student-dashboard.html', context)
 
