@@ -19,15 +19,14 @@ def index(request):
 def login_page(request):
     
     if request.method == "POST":
-        # username = request.POST.get('username')
-        email = request.POST.get('email')
+        username = request.POST.get('username')
         password = request.POST.get('password')
         
-        if not Students.objects.filter(email = email).exists():
-            messages.error(request, 'Invalid email')
+        if not User.objects.filter(username = username).exists():
+            messages.error(request, 'Invalid username')
             return redirect('/login/')
         
-        user = authenticate(request, email = email, password = password)
+        user = authenticate(request, username = username, password = password)
         
         if user is None:
             messages.error(request, 'Invalid Password')
@@ -35,6 +34,7 @@ def login_page(request):
         
         else:
             login(request, user)
+            # return redirect('/receipes/')
             return redirect('/student-dashboard/')
     
     context = {
@@ -52,37 +52,29 @@ def sign_up(request):
     if request.method == "POST":
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
-        # username = request.POST.get('username')
-        date_of_birth = request.POST.get('date_of_birth')
-        phone_number = request.POST.get('phone_number')
-        address = request.POST.get('address')
+        username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
         
-        user = Students.objects.filter(email = email)
-        # user_username = Students.objects.filter(username=username)
+        user = User.objects.filter(email = email)
+        user_username = User.objects.filter(username=username)
         
         if user.exists():
             messages.error(request, "Email already taken.")
             return redirect('/register/')
         
-        # elif user_username.exists():
-        #     messages.error(request, "Username already taken.")
-        #     return redirect('/register/')
+        elif user_username.exists():
+            messages.error(request, "Username already taken.")
+            return redirect('/register/')
         
-        user = Students.objects.create(
+        user = User.objects.create(
             first_name = first_name,
             last_name = last_name,
-            date_of_birth = date_of_birth,
-            phone_number = phone_number,
-            address = address,
-            # username = username,
+            username = username,
             email = email,
         )
-        # user.set_password(password)
-        # user.save()
-        student_instance.user.set_password('password')
-        student_instance.user.save()
+        user.set_password(password)
+        user.save()
         
         messages.info(request, "Account created Successfully")
         return redirect('/login/')
