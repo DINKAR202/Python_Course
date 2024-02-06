@@ -9,9 +9,7 @@ from .managers import CustomManager
 class CustomUser(AbstractUser):
         
         username = None
-        email = models.EmailField("email_address", unique=True)
-        phone = models.CharField(max_length=15)
-        
+        email = models.EmailField("email_address", unique=True)        
         USERNAME_FIELD = "email"
         REQUIRED_FIELDS = []
         objects = CustomManager()
@@ -23,3 +21,8 @@ class CustomUser(AbstractUser):
 class Student(models.Model):
     # user = models.ForeignKey(User, on_delete=models.SET_NULL, null = True , blank = True)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    # first_name = models.CharField(max_length=100)
+    # last_name = models.CharField(max_length=100)
+    # email = models.EmailField(unique=True)
+    # phone = models.CharField(max_length=15)
+    
