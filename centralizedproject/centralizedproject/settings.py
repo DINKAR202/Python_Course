@@ -70,6 +70,8 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL = "users.CustomUser"
+
 WSGI_APPLICATION = 'centralizedproject.wsgi.application'
 
 
