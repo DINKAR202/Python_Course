@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'students',
-    'college',
+    # 'college',
     'instructor',
 ]
 
@@ -69,8 +69,6 @@ TEMPLATES = [
         },
     },
 ]
-
-# AUTH_USER_MODEL = "students.CustomUser"
 
 WSGI_APPLICATION = 'centralizedproject.wsgi.application'
 
