@@ -10,12 +10,12 @@ class Student(models.Model):
     
 class CustomUser(AbstractUser):
     
-    username = none
+    username = None
     email = models.EmailField("email_address", unique=True)
     
-    USERNAME_FIELD = ['email']
+    USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
-    objects = CustomUser()
+    objects = CustomManager()
     
-    def__str__(self):
+    def __str__(self):
         return self.email
