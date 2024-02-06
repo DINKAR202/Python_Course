@@ -12,13 +12,13 @@
             <!-- Title -->
             <h5>Select the user based on preference!</h5>
             <div class="d-flex mb-2 flex-direction-row">
-              <button class="btn button" onclick="selectButton(1)">
+              <button class="btn button bg-warning" onclick="selectButton(1)">
                 <a class="text-dark" href="/student-register/">Student</a>
               </button>
               <button class="btn button" onclick="selectButton(2)">
                 <a class="text-dark" href="/college-register">College admin</a>
               </button>
-              <button class="btn bg-warning" onclick="selectButton(3)">
+              <button class="btn button" onclick="selectButton(3)">
                 <a class="text-dark" href="/instructor-register/">Instructor</a>
               </button>
               <button class="btn button" onclick="selectButton(4)">
@@ -82,14 +82,24 @@
                 </div>
                 {% endif %}
 
-                <!-- Full Name -->
+                <!-- First Name -->
                 <div class="mb-4">
-                  <label for="exampleInputEmail1" class="form-label">Full Name *</label>
+                  <label for="exampleInputEmail1" class="form-label">First Name *</label>
                   <div class="input-group input-group-lg">
                     <span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i
                         class="bi bi-person-circle"></i></span>
-                    <input type="text" class="form-control border-0 bg-light rounded-end ps-1" placeholder="Full Name"
-                      required name="full_name" id="exampleInputEmail1" />
+                    <input type="text" class="form-control border-0 bg-light rounded-end ps-1" placeholder="First Name"
+                      required name="first_name" id="exampleInputEmail1" />
+                  </div>
+                </div>
+                <!-- Last Name -->
+                <div class="mb-4">
+                  <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i
+                        class="bi bi-person-circle"></i></span>
+                    <input type="text" class="form-control border-0 bg-light rounded-end ps-1" placeholder="Last Name"
+                      name="last_name" id="exampleInputEmail1" />
                   </div>
                 </div>
 
@@ -105,7 +115,7 @@
                 </div>
 
                 <!-- phone -->
-                <div class="mb-4">
+                <!-- <div class="mb-4">
 									<label for="exampleInputEmail1" class="form-label">Phone *</label>
 									<div class="input-group input-group-lg">
 										<span
@@ -114,7 +124,7 @@
 										<input type="tel" class="form-control border-0 bg-light rounded-end ps-1"
 											placeholder="9845-1809-21" name="phone" id="exampleInputEmail1" />
 									</div>
-								</div>
+								</div> -->
 
                 <!-- Password -->
                 <div class="mb-4">
