@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User, AbstractUser, AbstractBaseUser
+# from django.contrib.auth.models import 
 
 # Create your models here.
 
@@ -11,7 +11,11 @@ class Student(models.Model):
 class CustomUser(AbstractUser):
     
     username = none
-    student_phone = models.CharField(max_length=100, unique=True)
+    email = models.EmailField("email_address", unique=True)
     
-    USERNAME_FIELD = ['student_phone']
+    USERNAME_FIELD = ['email']
     REQUIRED_FIELDS = []
+    objects = CustomUser()
+    
+    def__str__(self):
+        return self.email
