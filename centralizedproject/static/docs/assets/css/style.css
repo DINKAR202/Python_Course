@@ -22595,3 +22595,25 @@ html[dir=rtl] .choices__input {
 
 /*User CSS*/
 /*# sourceMappingURL=style.css.map */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background-color: #ddd;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.button.selected {
+  background-color: green;
+  color: #fff;
+}

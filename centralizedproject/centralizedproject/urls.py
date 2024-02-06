@@ -21,8 +21,8 @@ from instructor.views import *
 urlpatterns = [
     path('', index, name='index'),
     path('instructor-dashboard/', instructor_dashboard, name='instructor_dashboard'),
-    path('login/', login_page, name='login_page'),
-    path('register/', sign_up, name='sign_up'),
+    path('student-login/', login_page, name='login_page'),
+    path('student-register/', sign_up, name='sign_up'),
     path('logout/', logout_page, name='logout_page'),
     path('forgot-password/', forgot_password, name='forgot_password'),
     path('student-dashboard/', student_dashboard, name='student_dashboard'),
