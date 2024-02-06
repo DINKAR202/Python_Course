@@ -53,7 +53,7 @@ def sign_up(request):
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         email = request.POST.get('email')
-        phone = request.POST.get('phone')
+        # phone = request.POST.get('phone')
         password = request.POST.get('password')
         
         user_email = CustomUser.objects.filter(email=email)
@@ -64,14 +64,14 @@ def sign_up(request):
         #     return redirect('/register/')
         
         if user_email.exists():
-            messages.error(request, "email already taken.")
+            messages.error(request, "Email already taken.")
             return redirect('/register/')
         
         user = CustomUser.objects.create(
             first_name = first_name,
             last_name = last_name,
             email = email,
-            phone = phone,
+            # phone = phone,
         )
         user.set_password(password)
         user.save()
