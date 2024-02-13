@@ -2,26 +2,33 @@
 {% block start %}
 
 <div class="containner mt-5 ">
+
   <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
     
     {% csrf_token %}
     <h2 class="text-center"><b><i>This is receipes website</i></b></h2>
     <hr>
+
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Receipe name</label>
       <input name="receipe_name" required type="text" class="form-control">
     </div>
+
     <div class="form-floating">
       <textarea class="form-control" required name="receipe_description" placeholder="Leave a comment here"
         id="floatingTextarea"></textarea>
       <label for="floatingTextarea">Receipe description</label>
     </div>
+
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Receipe image</label>
       <input type="file" name="receipe_image" class="form-control">
     </div>
+    
     <button type="submit" class="btn btn-success">Add Receipe</button>
+
   </form>
+
   <hr>
   <div class="mt-5">
     <div class="mx-auto col-6">
