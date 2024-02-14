@@ -35,8 +35,9 @@ class CustomUser(AbstractUser):
     username = None  # Removed username, using email instead
     email = models.EmailField(unique=True)
     gender = models.CharField(max_length=1, choices=GENDER)
-    profile_pic = models.ImageField()
+    profile_pic = models.ImageField(upload_to="student_profile/")
     address = models.TextField()
+    aboutme = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     USERNAME_FIELD = "email"
